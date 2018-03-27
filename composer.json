@@ -1,0 +1,30 @@
+{
+  "name": "timur-flush/currencies-rate",
+  "description": "Library for getting currency exchange rates.",
+  "license": "BSD-3-Clause",
+  "minimum-stability": "stable",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "flush02"
+    }
+  ],
+  "require": {
+    "php": "^7.2.0",
+    "ext-phalcon": "^3.3.0",
+    "ext-curl": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "TimurFlush\\CurrenciesRate\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TimurFlush\\CurrenciesRate\\Tests\\": "Tests/"
+    }
+  }
+}
