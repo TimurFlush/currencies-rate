@@ -24,7 +24,8 @@ class Cryptonator extends Adapter implements AdapterInterface
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_SSL_VERIFYHOST => false,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_URL => $this->getFilledMask($this->_apiURL, $firstPair, $secondPair)
+            CURLOPT_URL => $this->getFilledMask($this->_apiURL, $firstPair, $secondPair),
+			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 YaBrowser/18.2.1.174 Yowser/2.5 Safari/537.36'
         ]);
 
         $result = curl_exec($ch);
