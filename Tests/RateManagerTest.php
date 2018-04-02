@@ -20,6 +20,7 @@ class RateManagerTest extends TestCase
     public function testGetCourse()
     {
         $this->assertNotFalse($this->_rateManager->getCourse('USD', 'RUB'), 'Could not get the course. API is not available.');
+		$this->assertNotFalse($this->_rateManager->getCourse('EUR', 'RUB'), 'Could not get the course. API is not available.');
     }
 
     public function tearDown()
