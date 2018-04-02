@@ -10,6 +10,11 @@ namespace TimurFlush\CurrenciesRate;
  */
 class RateManager
 {
+	/**
+	 * @var array
+	 */
+	private static $_adapterPriority = [];
+	
     /**
      * @param string $firstPair
      * @param string $secondPair
@@ -17,13 +22,14 @@ class RateManager
      */
     public function getCourse(string $firstPair, string $secondPair)
     {
-        $adapterPriority = require_once __DIR__ . DIRECTORY_SEPARATOR . '/Config/AdapterPriority.php';
+		if (!sizeof(self::$_adapterPriority))
+			self::$_adapterPriority = require __DIR__ . DIRECTORY_SEPARATOR . '/Config/AdapterPriority.php';
 
-        if (!is_array($adapterPriority))
+        if (!is_array(self::$_adapterPriority))
             return false;
 
         $rate = null;
-        foreach ($adapterPriority as $adapter){
+        foreach (self::$_adapterPriority as $adapter){
             $adapter = new $adapter;
             $get = $adapter->getCourse($firstPair, $secondPair);
 
