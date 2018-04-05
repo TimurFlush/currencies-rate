@@ -9,7 +9,7 @@ use TimurFlush\CurrenciesRate\Response;
 /**
  * Class Cryptonator
  * @package TimurFlush\CurrenciesRate\Adapter
- * @version 1.0.1
+ * @version 1.0.2
  * @author Timur Flush
  */
 class Cryptonator extends Adapter implements AdapterInterface

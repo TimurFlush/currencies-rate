@@ -5,7 +5,7 @@ namespace TimurFlush\CurrenciesRate;
 /**
  * Interface AdapterInterface
  * @package TimurFlush\CurrenciesRate
- * @version 1.0.1
+ * @version 1.0.2
  * @author Timur Flush
  */
 interface AdapterInterface
