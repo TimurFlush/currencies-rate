@@ -3,7 +3,7 @@
   "description": "Library for getting currency exchange rates.",
   "license": "BSD-3-Clause",
   "minimum-stability": "stable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     {
       "name": "flush02"
