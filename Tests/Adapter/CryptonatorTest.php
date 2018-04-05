@@ -19,7 +19,16 @@ class CryptonatorTest extends TestCase
 
     public function testGetCourse()
     {
-        $this->assertNotFalse($this->_adapter->getCourse('USD', 'RUB'), 'Could not get the course. API is not available.');
+        if ($this->_adapter->getCourse('USD', 'RUB')){
+            $this->assertTrue(true);
+            return;
+        }
+
+        $this->markTestSkipped(
+            'API is not available. Information: '
+            . PHP_EOL
+            . print_r($this->_adapter->getResponse(), true)
+        );
     }
 
     public function tearDown()
