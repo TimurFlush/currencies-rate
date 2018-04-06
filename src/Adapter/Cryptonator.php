@@ -65,15 +65,22 @@ class Cryptonator extends Adapter implements AdapterInterface
                 $matches = [];
                 preg_match('/makeUrl\("(.*)"\);/Ui', $result, $matches);
 
+                $url = $matches[1];
+
+                $matches = [];
+                preg_match('/url \+= "(.*)";/Ui', $result, $matches);
+
+                $query = str_replace(['"', '+', ' '], '', $matches[1]);
+
                 if (!isset($matches[1]))
                     return false;
 
-                $response->setURL($matches[1]);
+                $response->setURL($url);
                 $this->setResponse($response);
 
                 $ch = $this->curlInit();
                 curl_setopt_array($ch, [
-                    CURLOPT_URL => $matches[1],
+                    CURLOPT_URL => $url . $query,
                     CURLOPT_COOKIE => $cookieString,
                     CURLOPT_HEADERFUNCTION => [&$response, 'setHeaders']
                 ]);
