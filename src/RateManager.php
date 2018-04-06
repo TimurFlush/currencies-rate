@@ -5,7 +5,7 @@ namespace TimurFlush\CurrenciesRate;
 /**
  * Class RateManager
  * @package TimurFlush\CurrenciesRate
- * @version 1.0.4
+ * @version 1.0.5
  * @author TimurFlush
  */
 class RateManager

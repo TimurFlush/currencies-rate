@@ -5,7 +5,7 @@ namespace TimurFlush\CurrenciesRate;
 /**
  * Class Adapter
  * @package TimurFlush\CurrenciesRate
- * @version 1.0.4
+ * @version 1.0.5
  * @author Timur Flush
  */
 abstract class Adapter
