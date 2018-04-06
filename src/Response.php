@@ -6,7 +6,7 @@ namespace TimurFlush\CurrenciesRate;
  * Class Response
  * @package TimurFlush\CurrenciesRate
  * @author Timur Flush
- * @version 1.0.3
+ * @version 1.0.4
  */
 class Response
 {
